@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный центр Академия красоты</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="#start"><img src="assets/АК.svg" alt=""></a>
+            </div>
+            <nav class="desktop-nav">
+                <ui>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#course">Наш курс</a></li>
+                    <!-- <li><a href="#courses">Наши курсы</a></li> -->
+                    <!-- <li><a href="#advantages">Преимущества</a></li> -->
+                    <!-- <li><a href="#questions">Вопросы</a></li> -->
+                    <li><a href="#contacts">Контакты</a></li>
+                </ui>
+            </nav>
+            <div class="header-number">+7 950 856 31-98</div>
+            <button class="burger-btn" aria-label="Toggle menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#course">Наш курс</a></li>
+                <!-- <li><a href="#courses">Наши курсы</a></li> -->
+                <li><a href="#advantages">Преимущества</a></li>
+                <li><a href="#questions">Вопросы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </nav>
+            <div class="burger-number">+7 950 856 31-98</div>
+        </div>
+    </header>
+    <main>
+        <div class="hero" id="start">
+            <div class="hero-bg"></div>
+            <div class="hero-bg-filter"></div>
+            <div class="hero-container">
+                <div class="hero-title">Академия красоты</div>
+            </div>
+            <div class="hero-arrow">
+                <a href="#about">                
+                    <svg role="presentation" class="hero-arrow-svg" style="fill:#ffffff;" x="0px" y="0px" width="38.417px" height="18.592px" viewBox="0 0 38.417 18.592"><g><path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path></g></svg>
+                </a>
+            </div>
+        </div>
+        <div class="about" id="about">
+            <div class="about-container">
+                <div class="about-text">
+                    "Академия Красоты" - это современный учебный центр, где passion встречается с профессионализмом. 
+                    С 2015 года мы готовим востребованных специалистов в индустрии beauty-услуг. 
+                    Наши выпускники работают в лучших салонах города и открывают собственные студии. 
+                    Обучение проходит на профессиональном оборудовании с использованием premium-материалов. 
+                    Маленькие группы (до 8 человек) и индивидуальный подход к каждому студенту.
+                </div>
+            </div>
+        </div>
+        <div class="course" id="course">
+            <div class="course-container">
+                <div class="course-card">
+                        <img src="/assets/course2.jpg" alt="Курс парикмахеров" class="course-card-img">
+                        <div class="course-card-content">
+                            <div class="course-card-text">
+                                <div class="course-card-title">Парикмахерское искусство</div>
+                                <div class="course-card-description">
+                                    От классических стрижек до современных трендов. 
+                                    Работа с цветом, химическая завивка, 
+                                    мужской и детский мастер-классы.
+                                </div>
+                            </div>
+                            <button class="course-card-more-button"><a href="assets/parikmacher1.pdf">Подробнее</a></button>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="courses" id="courses">
+            <div class="courses-container">
+                <div class="courses-start">
+                    <div class="courses-title">Курсы</div>
+                    <div class="courses-controls">
+                        <button class="courses-controls-button courses-prev">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                                <path d="M23 13L15.5 20L23 27" stroke="#ffffff" stroke-width="2px" vector-effect="non-scaling-stroke"></path>
+                            </svg>
+                        </button>                    
+                        <button class="courses-controls-button courses-next">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+                                <path d="M17 13L24.5 20L17 27" stroke="#ffffff" stroke-width="2px" vector-effect="non-scaling-stroke"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="courses-items">
+                    <div class="courses-carousel">
+                        <div class="courses-card">
+                            <img src="/assets/course1.jpg" alt="Курс маникюра" class="courses-card-img">
+                                <div class="courses-card-meta">
+                                    <div class="meta-bubble">
+                                        2 месяца
+                                    </div>
+                                    <div class="meta-bubble">
+                                        12 000 ₽
+                                    </div>
+                                </div>                  
+                            <div class="courses-card-content">
+                                <div class="courses-card-title">Профессиональный маникюр</div>
+                                <div class="courses-card-description">
+                                    Полный курс от основ до сложного дизайна. 
+                                    Научитесь работать с разными типами ногтевых пластин, 
+                                    освоите аппаратный и комбинированный маникюр.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="courses-card">
+                            <img src="/assets/course2.jpg" alt="Курс парикмахеров" class="courses-card-img">
+                            <div class="courses-card-content">
+                                <div class="courses-card-title">Парикмахерское искусство</div>
+                                <div class="courses-card-description">
+                                    От классических стрижек до современных трендов. 
+                                    Работа с цветом, химическая завивка, 
+                                    мужской и детский мастер-классы.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="courses-card">
+                            <img src="/assets/course3.jpg" alt="Курс визажа" class="courses-card-img">
+                            <div class="courses-card-content">
+                                <div class="courses-card-title">Профессиональный визаж</div>
+                                <div class="courses-card-description">
+                                    Дневной, вечерний, свадебный макияж. 
+                                    Работа с возрастными особенностями. 
+                                    Подбор индивидуальной палитры.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="courses-card">
+                            <img src="/assets/course4.jpg" alt="Курс визажа" class="courses-card-img">
+                            <div class="courses-card-content">
+                                <div class="courses-card-title">Косметология и уход за кожей</div>
+                                <div class="courses-card-description">
+                                    Дневной, вечерний, свадебный макияж. 
+                                    Работа с возрастными особенностями. 
+                                    Подбор индивидуальной палитры.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="courses-card">
+                            <img src="/assets/course5.jpg" alt="Курс визажа" class="courses-card-img">
+                            <div class="courses-card-content">
+                                <div class="courses-card-title">Наращивание ресниц</div>
+                                <div class="courses-card-description">
+                                    Дневной, вечерний, свадебный макияж. 
+                                    Работа с возрастными особенностями. 
+                                    Подбор индивидуальной палитры.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="courses-card">
+                            <img src="/assets/course6.jpg" alt="Курс визажа" class="courses-card-img">
+                            <div class="courses-card-content">
+                                <div class="courses-card-title">Бровистика и ламинирование</div>
+                                <div class="courses-card-description">
+                                    Дневной, вечерний, свадебный макияж. 
+                                    Работа с возрастными особенностями. 
+                                    Подбор индивидуальной палитры.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="advantages" id="advantages">
+            <div class="advantages-container">
+                <div class="advantages-text-content">
+                    <div class="advantages-title">Почему мы?</div>
+                    <div class="advantages-text">"Академия Красоты" — это не просто курсы, это старт вашей успешной карьеры в индустрии красоты!<br><br>
+Мы создали пространство, где теория сочетается с практикой, а обучение проходит в атмосфере вдохновения и профессионализма.<br><br>
+🔹 Наши преподаватели работают в топовых салонах и знают все о современных трендах.<br>
+🔹 Учим на профессиональных инструментах и премиальных материалах.<br>
+🔹 80% времени вы работаете с реальными моделями.<br>
+🔹 Помогаем лучшим выпускникам найти работу у партнеров.<br>
+🔹 Программы соответствуют требованиям мировых beauty-брендов.<br><br>
+Выбирая нас, вы инвестируете в свое будущее!</div>
+                </div>
+                <div class="advantages-items">
+                    <div class="advantages-item">
+                        <div class="advantages-item-icon">
+                            <svg class="advantages-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 5H5C3.89543 5 3 5.89543 3 7V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16 3V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8 3V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 12L14 14L18 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        <div class="advantages-item-content">
+                            <div class="advantages-item-title">Официальный диплом</div>
+                            <div class="advantages-item-text">
+                                По окончании курса вы получаете сертификат государственного образца, 
+                                дающий право на работу в салонах красоты России и за рубежом.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advantages-item">
+                        <div class="advantages-item-icon">
+                            <svg class="advantages-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.5 10.5C9.32843 10.5 10 9.82843 10 9C10 8.17157 9.32843 7.5 8.5 7.5C7.67157 7.5 7 8.17157 7 9C7 9.82843 7.67157 10.5 8.5 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M21 15L16 10L5 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        <div class="advantages-item-content">
+                            <div class="advantages-item-title">Готовое портфолио</div>
+                            <div class="advantages-item-text">
+                                За время обучения вы создадите профессиональное портфолио 
+                                с работами, которое поможет быстро найти первых клиентов.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advantages-item">
+                        <div class="advantages-item-icon">
+                            <svg class="advantages-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        <div class="advantages-item-content">
+                            <div class="advantages-item-title">80% практики</div>
+                            <div class="advantages-item-text">
+                                Наши программы построены так, что основное время 
+                                вы проводите за отработкой навыков на реальных моделях.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advantages-item">
+                        <div class="advantages-item-icon">
+                            <svg class="advantages-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 7C16 6.46957 16.2107 5.96086 16.5858 5.58579C16.9609 5.21071 17.4696 5 18 5H21V19H18C17.4696 19 16.9609 18.7893 16.5858 18.4142C16.2107 18.0391 16 17.5304 16 17V7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8 7C8 6.46957 7.78929 5.96086 7.41421 5.58579C7.03914 5.21071 6.53043 5 6 5H3V19H6C6.53043 19 7.03914 18.7893 7.41421 18.4142C7.78929 18.0391 8 17.5304 8 17V7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 12H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        <div class="advantages-item-content">
+                            <div class="advantages-item-title">Помощь в трудоустройстве</div>
+                            <div class="advantages-item-text">
+                                Лучшие студенты получают приглашения на работу 
+                                от наших партнеров - ведущих салонов города.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="questions" id="questions">
+            <div class="questions-container">
+                <div class="questions-title">Вопросы и ответы</div>
+                <div class="questions-items">
+                    <div class="questions-item">
+                        <button class="questions-item-btn">
+                            <span>Какие документы нужны для записи на курс?</span>
+                        </button>
+                        <div class="questions-item-answer">
+                            <div class="questions-item-answer-content">
+                                Только паспорт и желание учиться! Никаких специальных 
+                                знаний или медицинской книжки на момент записи не требуется.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="questions-item">
+                        <button class="questions-item-btn">
+                            <span>Есть ли рассрочка на оплату обучения?</span>
+                        </button>
+                        <div class="questions-item-answer">
+                            <div class="questions-item-answer-content">
+                                Да, мы предлагаем беспроцентную рассрочку на 3 месяца. 
+                                Первый платеж - 50% стоимости курса перед началом обучения.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="questions-item">
+                        <button class="questions-item-btn">
+                            <span>Что если я пропущу занятие?</span>
+                        </button>
+                        <div class="questions-item-answer">
+                            <div class="questions-item-answer-content">
+                                Вы можете отработать пропущенное занятие с другой группой 
+                                или получить индивидуальную консультацию преподавателя.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="contacts" id="contacts">
+            <div class="contacts-container">
+                <!-- <div class="contacts-title">Контакты</div> -->
+                <div class="contacts-text">г. Волгодонск, ул. М. Кошевого, д. 23Д, этаж 2<br>+7 950 856 31-98</div>
+                <div class="contacts-gray-text">Часы работы:<br>С понедельника по воскресенье, с 9:00 до 19:00</div>
+                <div class="contacts-social-links-wrapper"><ul class="contacts-social-links">
+                    <li class="contacts-social-link-item"><a href="https://wa.me/79508563198" class="social-link-whatsapp"><svg class="t-sociallinks__svg" role="presentation" width="30px" height="30px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM69.7626 28.9928C64.6172 23.841 57.7739 21.0027 50.4832 21C35.4616 21 23.2346 33.2252 23.2292 48.2522C23.2274 53.0557 24.4823 57.7446 26.8668 61.8769L23 76L37.4477 72.2105C41.4282 74.3822 45.9107 75.5262 50.4714 75.528H50.4823C65.5029 75.528 77.7299 63.301 77.7363 48.2749C77.7408 40.9915 74.9089 34.1446 69.7626 28.9928ZM62.9086 53.9588C62.2274 53.6178 58.8799 51.9708 58.2551 51.7435C57.6313 51.5161 57.1766 51.4024 56.7228 52.0845C56.269 52.7666 54.964 54.2998 54.5666 54.7545C54.1692 55.2092 53.7718 55.2656 53.0915 54.9246C52.9802 54.8688 52.8283 54.803 52.6409 54.7217C51.6819 54.3057 49.7905 53.4855 47.6151 51.5443C45.5907 49.7382 44.2239 47.5084 43.8265 46.8272C43.4291 46.1452 43.7837 45.7769 44.1248 45.4376C44.3292 45.2338 44.564 44.9478 44.7987 44.662C44.9157 44.5194 45.0328 44.3768 45.146 44.2445C45.4345 43.9075 45.56 43.6516 45.7302 43.3049C45.7607 43.2427 45.7926 43.1776 45.8272 43.1087C46.0545 42.654 45.9409 42.2565 45.7708 41.9155C45.6572 41.6877 45.0118 40.1167 44.4265 38.6923C44.1355 37.984 43.8594 37.3119 43.671 36.8592C43.1828 35.687 42.6883 35.69 42.2913 35.6924C42.2386 35.6928 42.1876 35.6931 42.1386 35.6906C41.7421 35.6706 41.2874 35.667 40.8336 35.667C40.3798 35.667 39.6423 35.837 39.0175 36.5191C38.9773 36.5631 38.9323 36.6111 38.8834 36.6633C38.1738 37.4209 36.634 39.0648 36.634 42.2002C36.634 45.544 39.062 48.7748 39.4124 49.2411L39.415 49.2444C39.4371 49.274 39.4767 49.3309 39.5333 49.4121C40.3462 50.5782 44.6615 56.7691 51.0481 59.5271C52.6732 60.2291 53.9409 60.6475 54.9303 60.9612C56.5618 61.4796 58.046 61.4068 59.22 61.2313C60.5286 61.0358 63.2487 59.5844 63.8161 57.9938C64.3836 56.4033 64.3836 55.0392 64.2136 54.7554C64.0764 54.5258 63.7545 54.3701 63.2776 54.1395C63.1633 54.0843 63.0401 54.0247 62.9086 53.9588Z" fill="#000000"></path></svg></a></li>
+                </ul></div>
+            </div>
+        </div>
+        <div class="map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A30ce704632bfbd21f1da3014df685a1e46d0759a894da013976a67eef31d2ff8&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-information">
+                <div class="footer-logo">
+                    <a href="#start"><img src="assets/АК.svg" alt=""></a>
+                </div>
+                <div class="footer-text">ОГРНИП: 324619600161394<br>ИНН: 614316835133<br>© 2025 Академия красоты</div></div>
+            <div class="footer-navigation">
+                <div class="footer-navigation-title">Навигация</div>
+                <div class="footer-navigation-items">
+                    <ul>
+                        <li>
+                            <a href="#about">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#courses">Наши курсы</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#advantages">Преимущества</a>
+                        </li> -->
+                        <!-- <li>
+                            <a href="#questions">Вопросы</a>
+                        </li> -->
+                        <li>
+                            <a href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copy-notification" id="copyNotification">Номер скопирован!</div>
+
+</body>
+</html>
