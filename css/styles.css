@@ -133,7 +133,7 @@ header{
     background-attachment: scroll;
     background-image: url(/assets/bg.png);
     background-color: #000;
-    background-position: 50%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 103vh;
