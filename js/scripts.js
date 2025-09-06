@@ -1,119 +1,119 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.courses-carousel');
-    const prevBtn = document.querySelector('.courses-prev');
-    const nextBtn = document.querySelector('.courses-next');
-    const cards = document.querySelectorAll('.courses-card');
-    const cardWidth = cards[0].offsetWidth + 40; // width + gap
+// document.addEventListener('DOMContentLoaded', function() {
+//     const carousel = document.querySelector('.courses-carousel');
+//     const prevBtn = document.querySelector('.courses-prev');
+//     const nextBtn = document.querySelector('.courses-next');
+//     const cards = document.querySelectorAll('.courses-card');
+//     const cardWidth = cards[0].offsetWidth + 40; // width + gap
     
-    let currentPosition = 0;
-    let isDragging = false;
-    let startX, scrollLeft, velocity, lastX, animationFrame;
-    const maxPosition = (cards.length - 3) * cardWidth;
-    const friction = 0.95; 
-    const minVelocity = 0.5; 
+//     let currentPosition = 0;
+//     let isDragging = false;
+//     let startX, scrollLeft, velocity, lastX, animationFrame;
+//     const maxPosition = (cards.length - 3) * cardWidth;
+//     const friction = 0.95; 
+//     const minVelocity = 0.5; 
 
-    prevBtn.addEventListener('click', function() {
-        currentPosition += cardWidth;
-        if (currentPosition > 0) currentPosition = 0;
-        smoothScrollTo(-currentPosition);
-    });
+//     prevBtn.addEventListener('click', function() {
+//         currentPosition += cardWidth;
+//         if (currentPosition > 0) currentPosition = 0;
+//         smoothScrollTo(-currentPosition);
+//     });
     
-    nextBtn.addEventListener('click', function() {
-        currentPosition -= cardWidth;
-        if (currentPosition < -maxPosition) currentPosition = -maxPosition;
-        smoothScrollTo(-currentPosition);
-    });
+//     nextBtn.addEventListener('click', function() {
+//         currentPosition -= cardWidth;
+//         if (currentPosition < -maxPosition) currentPosition = -maxPosition;
+//         smoothScrollTo(-currentPosition);
+//     });
 
-    carousel.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
-        lastX = startX;
-        velocity = 0;
-        carousel.style.cursor = 'grabbing';
-        carousel.style.scrollBehavior = 'auto';
+//     carousel.addEventListener('mousedown', (e) => {
+//         isDragging = true;
+//         startX = e.pageX - carousel.offsetLeft;
+//         scrollLeft = carousel.scrollLeft;
+//         lastX = startX;
+//         velocity = 0;
+//         carousel.style.cursor = 'grabbing';
+//         carousel.style.scrollBehavior = 'auto';
         
-        cancelAnimationFrame(animationFrame);
-    });
+//         cancelAnimationFrame(animationFrame);
+//     });
 
-    carousel.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
+//     carousel.addEventListener('mousemove', (e) => {
+//         if (!isDragging) return;
+//         e.preventDefault();
         
-        const x = e.pageX - carousel.offsetLeft;
-        const walk = (x - startX);
+//         const x = e.pageX - carousel.offsetLeft;
+//         const walk = (x - startX);
         
-        const now = performance.now();
-        const deltaX = x - lastX;
-        lastX = x;
-        velocity = deltaX * 1.5;
+//         const now = performance.now();
+//         const deltaX = x - lastX;
+//         lastX = x;
+//         velocity = deltaX * 1.5;
         
-        carousel.scrollLeft = scrollLeft - walk;
-    });
+//         carousel.scrollLeft = scrollLeft - walk;
+//     });
 
-    carousel.addEventListener('mouseup', () => {
-        isDragging = false;
-        carousel.style.cursor = 'grab';
+//     carousel.addEventListener('mouseup', () => {
+//         isDragging = false;
+//         carousel.style.cursor = 'grab';
         
-        if (Math.abs(velocity) > minVelocity) {
-            animateInertia();
-        } else {
-            carousel.style.scrollBehavior = 'smooth';
-            currentPosition = -carousel.scrollLeft;
-            updateButtons();
-        }
-    });
+//         if (Math.abs(velocity) > minVelocity) {
+//             animateInertia();
+//         } else {
+//             carousel.style.scrollBehavior = 'smooth';
+//             currentPosition = -carousel.scrollLeft;
+//             updateButtons();
+//         }
+//     });
 
-    carousel.addEventListener('mouseleave', () => {
-        if (isDragging) {
-            isDragging = false;
-            carousel.style.cursor = 'grab';
+//     carousel.addEventListener('mouseleave', () => {
+//         if (isDragging) {
+//             isDragging = false;
+//             carousel.style.cursor = 'grab';
             
-            if (Math.abs(velocity) > minVelocity) {
-                animateInertia();
-            } else {
-                carousel.style.scrollBehavior = 'smooth';
-                currentPosition = -carousel.scrollLeft;
-                updateButtons();
-            }
-        }
-    });
+//             if (Math.abs(velocity) > minVelocity) {
+//                 animateInertia();
+//             } else {
+//                 carousel.style.scrollBehavior = 'smooth';
+//                 currentPosition = -carousel.scrollLeft;
+//                 updateButtons();
+//             }
+//         }
+//     });
 
-    function animateInertia() {
-        velocity *= friction;
+//     function animateInertia() {
+//         velocity *= friction;
         
-        if (Math.abs(velocity) > minVelocity) {
-            carousel.scrollLeft -= velocity;
-            animationFrame = requestAnimationFrame(animateInertia);
-        } else {
-            carousel.style.scrollBehavior = 'smooth';
-            currentPosition = -carousel.scrollLeft;
-            carousel.scrollLeft = -currentPosition;
-            updateButtons();
-        }
-    }
+//         if (Math.abs(velocity) > minVelocity) {
+//             carousel.scrollLeft -= velocity;
+//             animationFrame = requestAnimationFrame(animateInertia);
+//         } else {
+//             carousel.style.scrollBehavior = 'smooth';
+//             currentPosition = -carousel.scrollLeft;
+//             carousel.scrollLeft = -currentPosition;
+//             updateButtons();
+//         }
+//     }
 
-    function smoothScrollTo(position) {
-        carousel.style.scrollBehavior = 'smooth';
-        carousel.scrollLeft = position;
-        currentPosition = -position;
-        updateButtons();
-    }
+//     function smoothScrollTo(position) {
+//         carousel.style.scrollBehavior = 'smooth';
+//         carousel.scrollLeft = position;
+//         currentPosition = -position;
+//         updateButtons();
+//     }
 
-    function updateButtons() {
-        prevBtn.disabled = currentPosition === 0;
-        nextBtn.disabled = currentPosition <= -maxPosition;
-    }
+//     function updateButtons() {
+//         prevBtn.disabled = currentPosition === 0;
+//         nextBtn.disabled = currentPosition <= -maxPosition;
+//     }
 
-    carousel.addEventListener('scroll', function() {
-        if (!isDragging) {
-            currentPosition = -carousel.scrollLeft;
-            updateButtons();
-        }
-    });
+//     carousel.addEventListener('scroll', function() {
+//         if (!isDragging) {
+//             currentPosition = -carousel.scrollLeft;
+//             updateButtons();
+//         }
+//     });
 
-    updateButtons();
-});
+//     updateButtons();
+// });
 
 
 document.addEventListener('DOMContentLoaded', function() {
