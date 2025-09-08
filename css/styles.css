@@ -1,3 +1,5 @@
+/* index page */
+
 html{
     scroll-behavior: smooth;
 }
@@ -352,7 +354,7 @@ header{
   font-weight: bold;
   background-image: none;
   cursor: pointer;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   user-select: none;
 }
 
@@ -885,7 +887,6 @@ footer{
     }
 }
 
-
 /* ADAPTATION 1016px */
 
 @media (max-width: 1016px) {
@@ -954,4 +955,5 @@ footer{
         text-align: center;
     }
 }
+
 

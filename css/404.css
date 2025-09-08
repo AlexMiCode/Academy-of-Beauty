@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "ABeeZee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.error-container{
+    max-width: 1200px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.error-title{
+    text-align: center;
+    font-size: 3.75rem;
+    font-weight: 600;
+}
+
+.error-text{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.error-back-btn{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
